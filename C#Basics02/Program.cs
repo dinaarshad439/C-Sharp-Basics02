@@ -90,10 +90,19 @@ namespace C_Basics02
 
             #region (Q6) Building the book sentence using Interpolation
 
-            string Message2 = $"Book: {Title},Pages: {Pages}";
-            Console.WriteLine(Message2);
+            //string Message2 = $"Book: {Title},Pages: {Pages}";
+            //Console.WriteLine(Message2);
 
             #endregion
+
+
+            #region (Q7) Building the book sentence using string.Format
+
+            string Message3 = string.Format("Book: {0}, Pages: {1}", Title, Pages);
+            Console.WriteLine(Message3);
+
+            #endregion
+
 
 
 
