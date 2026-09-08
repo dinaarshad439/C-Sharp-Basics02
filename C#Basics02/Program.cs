@@ -82,10 +82,19 @@ namespace C_Basics02
 
             } while (!result);
 
-            string Message = "Book: " + Title + "," + " Pages: " + Pages;
-            Console.WriteLine(Message);
+            //string Message = "Book: " + Title + "," + " Pages: " + Pages;
+            //Console.WriteLine(Message);
 
             #endregion
+
+
+            #region (Q6) Building the book sentence using Interpolation
+
+            string Message2 = $"Book: {Title},Pages: {Pages}";
+            Console.WriteLine(Message2);
+
+            #endregion
+
 
 
 
