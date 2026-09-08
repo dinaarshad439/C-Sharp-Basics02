@@ -279,36 +279,60 @@ namespace C_Basics02
 
             #region (Q17) Skip "The Pragmatic Programmer" without stopping the loop
 
-            string[] Books = { "Clean code", "Refactoring", "The Pragmatic Programmer", "Clean architecture" };
+            //string[] Books = { "Clean code", "Refactoring", "The Pragmatic Programmer", "Clean architecture" };
+            //for (int i = 0; i < Books.Length; i++)
+            //{
+            //    if (Books[i] == "The Pragmatic Programmer")
+            //        continue;
+            //    Console.WriteLine($"Book : {i + 1}.{Books[i]}");
+
+            //}
+
+            #endregion
+
+
+            #region (Q18) Print the first book and exit early if the array is empty
+
+
+            int NumberOfBooks = 0;
+            bool isParsed = false;
+
+            do
+            {
+                Console.WriteLine("Enter the number of books:");
+                isParsed = int.TryParse(Console.ReadLine(), out NumberOfBooks);
+
+            } while (!isParsed);
+
+            string[] Books = new string[NumberOfBooks];
+
+            if(NumberOfBooks!=0) Console.WriteLine("Enter the titles of books:");
+
             for (int i = 0; i < Books.Length; i++)
             {
-                if (Books[i] == "The Pragmatic Programmer")
-                    continue;
-                Console.WriteLine($"Book : {i + 1}.{Books[i]}");
-
+                Books[i] = Console.ReadLine();
             }
+            PrintFirstBook(Books);
 
             #endregion
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
+
+        /// <summary>
+        /// Prints the first book in the array.
+        /// Exits early if the array is empty.
+        /// </summary>
+        /// <param name="Books">The array of book titles.</param>
+        static void PrintFirstBook(string[] Books)
+        {
+            if (Books.Length == 0)
+                return;
+
+            Console.WriteLine($"First book : {Books[0]}");
+        }
+
 
 
     }
