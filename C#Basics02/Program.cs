@@ -69,18 +69,18 @@ namespace C_Basics02
 
             #region (Q5) Building the book sentence using the + operator
 
-            Console.WriteLine("Enter Title : ");
-            string Title = Console.ReadLine();
-            int Pages = 0;
-            bool result = false;
+            //Console.WriteLine("Enter Title : ");
+            //string Title = Console.ReadLine();
+            //int Pages = 0;
+            //bool result = false;
 
-            // Making the user enter Validate Page input
-            do
-            {
-                Console.WriteLine("Enter Number of Pages : ");
-                result = int.TryParse(Console.ReadLine(), out Pages);
+            //// Making the user enter Validate Page input
+            //do
+            //{
+            //    Console.WriteLine("Enter Number of Pages : ");
+            //    result = int.TryParse(Console.ReadLine(), out Pages);
 
-            } while (!result);
+            //} while (!result);
 
             //string Message = "Book: " + Title + "," + " Pages: " + Pages;
             //Console.WriteLine(Message);
@@ -98,10 +98,37 @@ namespace C_Basics02
 
             #region (Q7) Building the book sentence using string.Format
 
-            string Message3 = string.Format("Book: {0}, Pages: {1}", Title, Pages);
-            Console.WriteLine(Message3);
+            //string Message3 = string.Format("Book: {0}, Pages: {1}", Title, Pages);
+            //Console.WriteLine(Message3);
 
             #endregion
+
+
+            #region (Q8) Use if/else to classify the book based on the number of pages
+
+            int Pages = 0;
+            bool Result = false;
+
+            // Making the user enter Validate Page input
+            do
+            {
+                Console.WriteLine("Enter number of Pages: ");
+                Result = int.TryParse(Console.ReadLine(), out Pages);
+
+            } while (!Result);
+
+            // Condition to classify the book
+            if (Pages > 300)
+            {
+                Console.WriteLine("Long Book");
+            }
+            else
+            {
+                Console.WriteLine("Short Book");
+            }
+
+            #endregion
+
 
 
 
