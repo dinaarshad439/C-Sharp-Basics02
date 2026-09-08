@@ -160,24 +160,45 @@ namespace C_Basics02
 
             #region (Q10) Use switch to handle different book titles
 
-            Console.WriteLine("Enter the title : ");
-            string Title = Console.ReadLine();
+            //Console.WriteLine("Enter the title : ");
+            //string Title = Console.ReadLine();
 
-            switch (Title)
-            {
-                case "Clean Code":
-                    Console.WriteLine("Great choice!");
-                    break;
-                case "Refactoring":
-                    Console.WriteLine("Nice pick!");
-                    break;
-                default:
-                    Console.WriteLine("Never heard of it");
-                    break;
+            //switch (Title)
+            //{
+            //    case "Clean Code":
+            //        Console.WriteLine("Great choice!");
+            //        break;
+            //    case "Refactoring":
+            //        Console.WriteLine("Nice pick!");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Never heard of it");
+            //        break;
 
-            }
+            //}
 
             #endregion
+
+
+            #region (Q11) Use the ternary operator to determine the book size
+
+            int Pages = 0;
+            bool isParsed = false;
+
+            do
+            {
+                Console.WriteLine("Enter number of Pages :");
+                isParsed = int.TryParse(Console.ReadLine(), out Pages);
+
+            } while (!isParsed);
+
+            string SizeLabel = Pages > 300 ? "Long Book" : "Short Book";
+
+            Console.WriteLine($"It is a {SizeLabel}");
+
+            #endregion
+
+
 
 
 
