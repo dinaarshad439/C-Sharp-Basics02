@@ -35,19 +35,37 @@ namespace C_Basics02
 
             #region (Q3) Modify the same StringBuilder object using multiple Append() calls
 
-            // StringBuilder is mutable, so the same object can be modified.
+            //// StringBuilder is mutable, so the same object can be modified.
+            //StringBuilder sb = new StringBuilder();
+
+            //sb.Append("Book List");
+            //Console.WriteLine($"Hash code after first append : {sb.GetHashCode()}");
+
+            //sb.Append(" - Updated");
+            //Console.WriteLine($"Hash code after second append : {sb.GetHashCode()}");
+
+
+            //Console.WriteLine($"The final result is : {sb}");
+
+            #endregion
+
+
+            #region (Q4) Modify the existing StringBuilder by replacing specific text
+
             StringBuilder sb = new StringBuilder();
 
             sb.Append("Book List");
-            Console.WriteLine($"Hash code after first append : {sb.GetHashCode()}");
-
             sb.Append(" - Updated");
-            Console.WriteLine($"Hash code after second append : {sb.GetHashCode()}");
 
+            Console.WriteLine($"The result before replacing is : {sb}");
 
-            Console.WriteLine($"The final result is : {sb}");
+            sb.Replace("Book List", "Library");
+
+            Console.WriteLine($"The Updated result after replacing is : {sb}");
+
 
             #endregion
+
 
 
 
