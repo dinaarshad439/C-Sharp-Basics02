@@ -265,16 +265,31 @@ namespace C_Basics02
 
             #region (Q16) Use break to exit the loop when "Refactoring" is found
 
-            string[] Books = { "Clean code", "Refactoring", "The Pragmatic Programmer" };
+            //string[] Books = { "Clean code", "Refactoring", "The Pragmatic Programmer" };
+            //for (int i = 0; i < Books.Length; i++)
+            //{
+            //    if (Books[i] == "Refactoring")
+            //        break;
+            //    Console.WriteLine($"Book : {i + 1}.{Books[i]}");
+
+            //}
+
+            #endregion
+
+
+            #region (Q17) Skip "The Pragmatic Programmer" without stopping the loop
+
+            string[] Books = { "Clean code", "Refactoring", "The Pragmatic Programmer", "Clean architecture" };
             for (int i = 0; i < Books.Length; i++)
             {
-                if (Books[i] == "Refactoring")
-                    break;
+                if (Books[i] == "The Pragmatic Programmer")
+                    continue;
                 Console.WriteLine($"Book : {i + 1}.{Books[i]}");
 
             }
 
             #endregion
+
 
 
 
