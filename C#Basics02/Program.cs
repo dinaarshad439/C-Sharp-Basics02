@@ -132,30 +132,53 @@ namespace C_Basics02
 
             #region (Q9) Check if the book has more than 300 pages and is available
 
-            int Pages = 0;
-            bool Result = false;
-            bool isAvailable = true;
+            //int Pages = 0;
+            //bool Result = false;
+            //bool isAvailable = true;
 
-            // Making the user enter Validate Page input
-            do
-            {
-                Console.WriteLine("Enter number of Pages: ");
-                Result = int.TryParse(Console.ReadLine(), out Pages);
+            //// Making the user enter Validate Page input
+            //do
+            //{
+            //    Console.WriteLine("Enter number of Pages: ");
+            //    Result = int.TryParse(Console.ReadLine(), out Pages);
 
-            } while (!Result);
+            //} while (!Result);
 
-            // Check if the book has more than 300 pages and is available
-            if (Pages > 300 && isAvailable)
-            {
-                Console.WriteLine("You can borrow this book");
-            }
-            else
-            {
-                Console.WriteLine("The book is not found");
-            }
+            //// Check if the book has more than 300 pages and is available
+            //if (Pages > 300 && isAvailable)
+            //{
+            //    Console.WriteLine("You can borrow this book");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("The book is not found");
+            //}
 
 
             #endregion
+
+
+            #region (Q10) Use switch to handle different book titles
+
+            Console.WriteLine("Enter the title : ");
+            string Title = Console.ReadLine();
+
+            switch (Title)
+            {
+                case "Clean Code":
+                    Console.WriteLine("Great choice!");
+                    break;
+                case "Refactoring":
+                    Console.WriteLine("Nice pick!");
+                    break;
+                default:
+                    Console.WriteLine("Never heard of it");
+                    break;
+
+            }
+
+            #endregion
+
 
 
 
