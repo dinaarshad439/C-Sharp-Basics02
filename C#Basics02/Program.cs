@@ -106,8 +106,35 @@ namespace C_Basics02
 
             #region (Q8) Use if/else to classify the book based on the number of pages
 
+            //int Pages = 0;
+            //bool Result = false;
+
+            //// Making the user enter Validate Page input
+            //do
+            //{
+            //    Console.WriteLine("Enter number of Pages: ");
+            //    Result = int.TryParse(Console.ReadLine(), out Pages);
+
+            //} while (!Result);
+
+            //// Condition to classify the book
+            //if (Pages > 300)
+            //{
+            //    Console.WriteLine("Long Book");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Short Book");
+            //}
+
+            #endregion
+
+
+            #region (Q9) Check if the book has more than 300 pages and is available
+
             int Pages = 0;
             bool Result = false;
+            bool isAvailable = true;
 
             // Making the user enter Validate Page input
             do
@@ -117,17 +144,19 @@ namespace C_Basics02
 
             } while (!Result);
 
-            // Condition to classify the book
-            if (Pages > 300)
+            // Check if the book has more than 300 pages and is available
+            if (Pages > 300 && isAvailable)
             {
-                Console.WriteLine("Long Book");
+                Console.WriteLine("You can borrow this book");
             }
             else
             {
-                Console.WriteLine("Short Book");
+                Console.WriteLine("The book is not found");
             }
 
+
             #endregion
+
 
 
 
