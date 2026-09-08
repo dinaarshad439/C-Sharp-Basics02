@@ -220,13 +220,26 @@ namespace C_Basics02
                 Books[i] = Console.ReadLine();
             }
 
-            for (int i = 0; i < Books.Length; i++)
-            {
-                Console.WriteLine($"Book : {i + 1}.{Books[i]}");
+            //for (int i = 0; i < Books.Length; i++)
+            //{
+            //    Console.WriteLine($"Book : {i + 1}.{Books[i]}");
 
+            //}
+
+            #endregion
+
+
+            #region (Q13) Print each book title using a while loop 
+
+            int j = 0;
+            while (j < Books.Length)
+            {
+                Console.WriteLine($"Book : {j + 1}.{Books[j]}");
+                j++;
             }
 
             #endregion
+
 
 
 
