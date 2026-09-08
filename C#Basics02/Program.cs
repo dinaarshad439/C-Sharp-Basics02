@@ -201,24 +201,24 @@ namespace C_Basics02
 
             #region (Q12) Create a book array, get titles from the user, and print them using for loop
 
-            int NumberOfBooks = 0;
-            bool isParsed = false;
+            //int NumberOfBooks = 0;
+            //bool isParsed = false;
 
-            do
-            {
-                Console.WriteLine("Enter the number of books:");
-                isParsed = int.TryParse(Console.ReadLine(), out NumberOfBooks);
+            //do
+            //{
+            //    Console.WriteLine("Enter the number of books:");
+            //    isParsed = int.TryParse(Console.ReadLine(), out NumberOfBooks);
 
-            } while (!isParsed);
+            //} while (!isParsed);
 
-            string[] Books = new string[NumberOfBooks];
+            //string[] Books = new string[NumberOfBooks];
 
-            Console.WriteLine("Enter the titles of books:");
+            //Console.WriteLine("Enter the titles of books:");
 
-            for (int i = 0; i < Books.Length; i++)
-            {
-                Books[i] = Console.ReadLine();
-            }
+            //for (int i = 0; i < Books.Length; i++)
+            //{
+            //    Books[i] = Console.ReadLine();
+            //}
 
             //for (int i = 0; i < Books.Length; i++)
             //{
@@ -255,12 +255,27 @@ namespace C_Basics02
 
 
             #region (Q15) Print every book title using a foreach loop 
-            foreach (string Book in Books)
+            //foreach (string Book in Books)
+            //{
+            //    Console.WriteLine($"Book : {Book}");
+            //}
+
+            #endregion
+
+
+            #region (Q16) Use break to exit the loop when "Refactoring" is found
+
+            string[] Books = { "Clean code", "Refactoring", "The Pragmatic Programmer" };
+            for (int i = 0; i < Books.Length; i++)
             {
-                Console.WriteLine($"Book : {Book}");
+                if (Books[i] == "Refactoring")
+                    break;
+                Console.WriteLine($"Book : {i + 1}.{Books[i]}");
+
             }
 
             #endregion
+
 
 
 
