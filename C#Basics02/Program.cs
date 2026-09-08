@@ -201,24 +201,24 @@ namespace C_Basics02
 
             #region (Q12) Create a book array, get titles from the user, and print them using for loop
 
-            int NumberOfBooks = 0;
-            bool isParsed = false;
+            //int NumberOfBooks = 0;
+            //bool isParsed = false;
 
-            do
-            {
-                Console.WriteLine("Enter the number of books:");
-                isParsed = int.TryParse(Console.ReadLine(), out NumberOfBooks);
+            //do
+            //{
+            //    Console.WriteLine("Enter the number of books:");
+            //    isParsed = int.TryParse(Console.ReadLine(), out NumberOfBooks);
 
-            } while (!isParsed);
+            //} while (!isParsed);
 
-            string[] Books = new string[NumberOfBooks];
+            //string[] Books = new string[NumberOfBooks];
 
-            Console.WriteLine("Enter the titles of books:");
+            //Console.WriteLine("Enter the titles of books:");
 
-            for (int i = 0; i < Books.Length; i++)
-            {
-                Books[i] = Console.ReadLine();
-            }
+            //for (int i = 0; i < Books.Length; i++)
+            //{
+            //    Books[i] = Console.ReadLine();
+            //}
 
             //for (int i = 0; i < Books.Length; i++)
             //{
@@ -231,14 +231,28 @@ namespace C_Basics02
 
             #region (Q13) Print each book title using a while loop 
 
-            int j = 0;
-            while (j < Books.Length)
-            {
-                Console.WriteLine($"Book : {j + 1}.{Books[j]}");
-                j++;
-            }
+            //int j = 0;
+            //while (j < Books.Length)
+            //{
+            //    Console.WriteLine($"Book : {j + 1}.{Books[j]}");
+            //    j++;
+            //}
 
             #endregion
+
+
+            #region (Q14) Print the message exactly 3 times using a do-while loop
+
+            int i = 0;
+            do
+            {
+                Console.WriteLine("Checking book......");
+                i++;
+
+            } while (i < 3);
+
+            #endregion
+
 
 
 
