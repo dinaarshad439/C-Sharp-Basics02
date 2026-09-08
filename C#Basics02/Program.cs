@@ -52,19 +52,41 @@ namespace C_Basics02
 
             #region (Q4) Modify the existing StringBuilder by replacing specific text
 
-            StringBuilder sb = new StringBuilder();
+            //StringBuilder sb = new StringBuilder();
 
-            sb.Append("Book List");
-            sb.Append(" - Updated");
+            //sb.Append("Book List");
+            //sb.Append(" - Updated");
 
-            Console.WriteLine($"The result before replacing is : {sb}");
+            //Console.WriteLine($"The result before replacing is : {sb}");
 
-            sb.Replace("Book List", "Library");
+            //sb.Replace("Book List", "Library");
 
-            Console.WriteLine($"The Updated result after replacing is : {sb}");
+            //Console.WriteLine($"The Updated result after replacing is : {sb}");
 
 
             #endregion
+
+
+            #region (Q5) Building the book sentence using the + operator
+
+            Console.WriteLine("Enter Title : ");
+            string Title = Console.ReadLine();
+            int Pages = 0;
+            bool result = false;
+
+            // Making the user enter Validate Page input
+            do
+            {
+                Console.WriteLine("Enter Number of Pages : ");
+                result = int.TryParse(Console.ReadLine(), out Pages);
+
+            } while (!result);
+
+            string Message = "Book: " + Title + "," + " Pages: " + Pages;
+            Console.WriteLine(Message);
+
+            #endregion
+
 
 
 
