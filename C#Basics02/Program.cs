@@ -182,21 +182,52 @@ namespace C_Basics02
 
             #region (Q11) Use the ternary operator to determine the book size
 
-            int Pages = 0;
+            //int Pages = 0;
+            //bool isParsed = false;
+
+            //do
+            //{
+            //    Console.WriteLine("Enter number of Pages :");
+            //    isParsed = int.TryParse(Console.ReadLine(), out Pages);
+
+            //} while (!isParsed);
+
+            //string SizeLabel = Pages > 300 ? "Long Book" : "Short Book";
+
+            //Console.WriteLine($"It is a {SizeLabel}");
+
+            #endregion
+
+
+            #region (Q12) Create a book array, get titles from the user, and print them using for loop
+
+            int NumberOfBooks = 0;
             bool isParsed = false;
 
             do
             {
-                Console.WriteLine("Enter number of Pages :");
-                isParsed = int.TryParse(Console.ReadLine(), out Pages);
+                Console.WriteLine("Enter the number of books:");
+                isParsed = int.TryParse(Console.ReadLine(), out NumberOfBooks);
 
             } while (!isParsed);
 
-            string SizeLabel = Pages > 300 ? "Long Book" : "Short Book";
+            string[] Books = new string[NumberOfBooks];
 
-            Console.WriteLine($"It is a {SizeLabel}");
+            Console.WriteLine("Enter the titles of books:");
+
+            for (int i = 0; i < Books.Length; i++)
+            {
+                Books[i] = Console.ReadLine();
+            }
+
+            for (int i = 0; i < Books.Length; i++)
+            {
+                Console.WriteLine($"Book : {i + 1}.{Books[i]}");
+
+            }
 
             #endregion
+
 
 
 
