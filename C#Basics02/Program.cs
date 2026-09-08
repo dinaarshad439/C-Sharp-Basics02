@@ -24,13 +24,31 @@ namespace C_Basics02
 
             #region (Q2)  Check if both strings reference have the same object in memory
 
-            string Name = "clean code";
-            string Name2 = "clean code";
+            //string Name = "clean code";
+            //string Name2 = "clean code";
 
-            // Compare object references
-            Console.WriteLine($"Did they Have the same address ? {object.ReferenceEquals(Name, Name2)}");
+            //// Compare object references
+            //Console.WriteLine($"Did they Have the same address ? {object.ReferenceEquals(Name, Name2)}");
 
             #endregion
+
+
+            #region (Q3) Modify the same StringBuilder object using multiple Append() calls
+
+            // StringBuilder is mutable, so the same object can be modified.
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append("Book List");
+            Console.WriteLine($"Hash code after first append : {sb.GetHashCode()}");
+
+            sb.Append(" - Updated");
+            Console.WriteLine($"Hash code after second append : {sb.GetHashCode()}");
+
+
+            Console.WriteLine($"The final result is : {sb}");
+
+            #endregion
+
 
 
 
